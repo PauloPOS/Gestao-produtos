@@ -1,0 +1,19 @@
+{
+    "produtos": [
+      {
+        "id": 1,
+        "nome": "Produto A",
+        "categoria": "Eletrônicos",
+        "preco": "500.00",
+        "estoque": 20
+      },
+      {
+        "id": 2,
+        "nome": "Produto B",
+        "categoria": "Móveis",
+        "preco": "1200.00",
+        "estoque": 10
+      }
+    ]
+  }
+  

@@ -1,0 +1,78 @@
+:root,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #766c88; /* Cor roxa */
+  color: white;
+  padding: 16px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  background-color: #eeeeee;
+  margin-top: 8px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #673ab7; /* Cor roxa */
+  padding: 8px 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+main {
+  padding: 16px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+table th {
+  background-color: #007bff;
+  color: white;
+}
+
+table td a {
+  text-decoration: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+.btn-editar {
+  background-color: #241806; /* Laranja para editar */
+}
+
+
+.btn-excluir {
+  background-color: #b90e50; /* Vermelho para excluir */
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  background-color: #eeeeee;
+  color: #333;
+}
