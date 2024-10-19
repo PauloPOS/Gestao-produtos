@@ -1,0 +1,53 @@
+{
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Produto A",
+      "categoria": "Eletrônicos",
+      "preco": "500.00",
+      "estoque": 20
+    },
+    {
+      "id": "3",
+      "nome": "Produto C",
+      "categoria": "Vestuário",
+      "preco": "150.00",
+      "estoque": 50
+    },
+    {
+      "id": "4",
+      "nome": "Produto D",
+      "categoria": "Eletrônicos",
+      "preco": "850.00",
+      "estoque": 15
+    },
+    {
+      "id": "7",
+      "nome": "Produto G",
+      "categoria": "Vestuário",
+      "preco": "80.00",
+      "estoque": 100
+    },
+    {
+      "id": "8",
+      "nome": "Produto H",
+      "categoria": "Automotivo",
+      "preco": "2000.00",
+      "estoque": 5
+    },
+    {
+      "id": "9",
+      "nome": "Produto I",
+      "categoria": "Eletrônicos",
+      "preco": "300.00",
+      "estoque": 25
+    },
+    {
+      "id": "10",
+      "nome": "Produto J",
+      "categoria": "Móveis",
+      "preco": "950.00",
+      "estoque": 8
+    }
+  ]
+}
