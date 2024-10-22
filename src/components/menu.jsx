@@ -1,3 +1,4 @@
+import "..assets/styleGlobal"
 
 function Menu(){
     return(
@@ -7,4 +8,4 @@ function Menu(){
     )
 }
 
-export default Menu;
+export default Menu;q

@@ -100,3 +100,25 @@ td {
 .btn-excluir {
   background-color: #dc3545; /* Cor vermelha para excluir */
 }
+
+.cadastro {
+  background: red;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-height: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.cadastro label{
+    color: #ffc107;
+    font-weight:bold ;
+}
+.cadastro input{
+  border : nome; 
+  padding: 10px;
+
+}

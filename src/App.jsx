@@ -4,6 +4,7 @@ import Table from "./components/table";
 import { useEffect } from "react";
 import { useState } from "react";
 import { deleteProdutosApi, getProdutosApi } from "./services/api";
+import Form from "./components/form";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <Layout>
+      <Form/>
       <Table produtos={produtos} deleteFn={deleteProdutos} />
     </Layout>
   );
