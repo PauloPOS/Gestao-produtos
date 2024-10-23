@@ -1,7 +1,7 @@
 // @flow
 //import * as React from 'react';
 
-import "src/assets/styleGlobal.css"
+import "../assets/styleGlobal.css";
 
 
 function Form() {
@@ -12,22 +12,24 @@ function Form() {
         <input type="text" placeholder="Nome" />
       </div>
       <div className="field">
-        <label>Nome:</label>
-        <input type="text" placeholder="Nome" />
+        <label>Categoria:</label>
+        <input type="text" placeholder="Categoria" />
       </div>
       <div className="field">
-        <label>Nome:</label>
-        <input type="text" placeholder="Nome" />
+        <label>Preço:</label>
+        <input type="text" placeholder="Preco" />
       </div>
       <div className="field">
-        <label>Nome:</label>
-        <input type="text" placeholder="Nome" />
+        <label>Estoque:</label>
+        <input type="text" placeholder="Estoque" />
       </div>
       <div className="field">
-        <label>Nome:</label>
-        <input type="text" placeholder="Nome" />
+      <button>Salvar</button>
       </div>
     </div>
+
+
+
   );
 }
 

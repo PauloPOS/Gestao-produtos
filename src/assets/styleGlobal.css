@@ -102,23 +102,52 @@ td {
 }
 
 .cadastro {
-  background: red;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
-  min-height: 300px;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  background: rgb(89, 94, 102);              /* Cor de fundo do formulário */
+  margin-left: 0;               /* Alinha o formulário à esquerda */
+  margin-right: auto;           /* Remove qualquer centralização à direita */
+  display: flex;                /* Usa flexbox para organizar o conteúdo */
+  flex-direction: column;       /* Coloca os itens em uma coluna (um abaixo do outro) */
+  gap: 10px;                    /* Espaçamento entre os elementos do formulário */
+  flex: 1;                      /* Permite que o formulário cresça dentro do container */
+  min-height: 300px;            /* Define uma altura mínima */
+  padding: 20px;                /* Aumenta o espaçamento interno do formulário */
+  border-radius: 10px;          /* Arredonda as bordas do formulário */
+  margin-bottom: 20px;          /* Espaço na parte inferior do formulário */
+  width: 50%;                   /* Define a largura do formulário (pode ser ajustado conforme necessidade) */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve ao redor do formulário */
 }
 
-.cadastro label{
-    color: #ffc107;
-    font-weight:bold ;
+.cadastro label {
+  color: #ffc107;               /* Cor amarela para os textos dos labels */
+  font-weight: bold;            /* Negrito para o texto dos labels */
+  text-align: left;             /* Alinha os labels à esquerda */
 }
-.cadastro input{
-  border : nome; 
-  padding: 10px;
 
+.cadastro input {
+  border: 2px solid #ccc;       /* Define a borda dos campos de entrada */
+  padding: 10px;                /* Adiciona espaçamento interno nos campos */
+  border-radius: 5px;           /* Arredonda as bordas dos campos */
+  width: 100%;                  /* Faz os campos ocuparem toda a largura do formulário */
+  box-sizing: border-box;       /* Garante que o padding seja incluído no cálculo da largura */
+}
+
+.cadastro input:focus {
+  border-color: #ffc107;        /* Altera a cor da borda quando o campo está em foco */
+  outline: none;                /* Remove o contorno padrão ao focar */
+}
+
+.cadastro field button {
+  border-color: #ffc107;        /* Altera a cor da borda quando o campo está em foco */
+  outline: none;               /* Remove o contorno padrão ao focar */
+}
+
+.Topo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #6b5b95;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }

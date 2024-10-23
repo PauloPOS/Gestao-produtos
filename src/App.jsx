@@ -4,7 +4,10 @@ import Table from "./components/table";
 import { useEffect } from "react";
 import { useState } from "react";
 import { deleteProdutosApi, getProdutosApi } from "./services/api";
+import Topo from "./components/topo";
 import Form from "./components/form";
+
+
 
 function App() {
 
@@ -19,9 +22,9 @@ function App() {
     } catch {
       alert("aconteceu erro app ");
     }
-
-    //Busca produtos
   };
+    //Busca produtos
+ 
   const getProdutos = async () => {
     const data = await getProdutosApi();
     setProdutos(data);
@@ -34,7 +37,8 @@ function App() {
 
   return (
     <Layout>
-      <Form/>
+      <Topo isList={false} />
+      <Form />
       <Table produtos={produtos} deleteFn={deleteProdutos} />
     </Layout>
   );
