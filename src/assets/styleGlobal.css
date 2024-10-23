@@ -141,7 +141,7 @@ td {
   outline: none;               /* Remove o contorno padrão ao focar */
 }
 
-.Topo {
+.topo {
   font-size: 24px;
   font-weight: bold;
   color: #fff;
@@ -150,4 +150,26 @@ td {
   text-align: center;
   border-radius: 8px;
   margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Estilo para o botão dentro do topo */
+.topo button {
+  background-color: #02183f; /* Cor de fundo azul escuro */
+  color: #fff; /* Cor do texto (branca) */
+  padding: 10px;
+  border-radius: 8px;
+  border: none; /* Remove a borda padrão */
+  cursor: pointer; /* Aponta que o botão é clicável */
+  margin-left: 0; /* Garante que o botão fique alinhado à esquerda */
+  margin-top: 10px; /* Adiciona um espaço acima do botão, se necessário */
+  display: flex; /* Flexbox para alinhar o texto e o ícone */
+  align-items: center; /* Alinha verticalmente ícone e texto */
+  justify-content: center; /* Alinha horizontalmente ícone e texto */
+  gap: 8px; /* Espaço entre o texto e o ícone */
+}
+
+.icon {
+  display: flex;
+  align-items: center;
 }
