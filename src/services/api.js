@@ -17,3 +17,30 @@ export async function deleteProdutosApi(id){
     }
   
 }
+
+export async function cadastroProdutoApi(form) {
+    // poderiam usar o axios
+    try {
+      await http.post(`/produtos/`, form);
+    } catch {
+      throw new Error("não foi possível cadastrar");
+    }
+  }
+  export async function editProdutoApi(form) {
+    // poderiam usar o axios
+    try {
+      await http.patch(`/produtos/${form.id}`, form);
+    } catch {
+      throw new Error("não foi possível atualizar");
+    }
+  }
+  
+  export async function detalhesProdutoApi(id) {
+    // poderiam usar o axios
+    try {
+      return await http.get(`/produtos/${id}`);
+    } catch {
+      throw new Error("não foi possível atualizar");
+    }
+  }
+  
