@@ -5,7 +5,7 @@ import "../assets/styleGlobal.css"
 function Topo({ show, act }) {
   return (
     <div className="topo">
-      <button onClick={() => act(!show)} className="btn">
+       <button className={`${!show && "list"} btn`} onClick={() => act(!show)}>
         {show ? "Cadastro" : "Listagem"}
         <span className="icon">{show ? <GoPlus /> : <FaRegRectangleList />}</span>
       </button>

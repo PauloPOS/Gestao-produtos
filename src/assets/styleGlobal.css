@@ -173,3 +173,7 @@ td {
   display: flex;
   align-items: center;
 }
+
+.error {
+  text-align: center;
+}

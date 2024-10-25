@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
 //import React from 'react';
+import { useNavigate } from "react-router-dom";
 import { columns} from "../config/columns-produtos"
+import { FaEdit, FaTrash } from "react-icons/fa";
 
-function Table  ({ produtos, deleteFn }) {
-    
+// eslint-disable-next-line no-unused-vars
+function Table  ({ produtos, deleteFn, editForm }) {
+  const navigate = useNavigate();
     return (
         <table>
           
@@ -26,13 +29,19 @@ function Table  ({ produtos, deleteFn }) {
             <td>{item.estoque}</td>
             
             <td>
-              <a href="#" className="btn btn-editar">Editar</a>
+            <button
+                onClick={() => navigate(`/detalhes/${item.id}`)}
+                className="btn btn-editar"
+              >
+                <FaEdit />
+              </button>
             </td>
             <td>
                <button 
                onClick={() => deleteFn(item.id)} 
                className="btn btn-excluir">Excluir
                 
+                <FaTrash />
                </button> 
           
             </td>
