@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "../assets/styleGlobal.css";
+
 function Form({ produto, change, submit }) {
 
   console.log("Produto:", produto);

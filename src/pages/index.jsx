@@ -1,4 +1,4 @@
-import "../assets/styleGlobal.css";
+
 import Table from "../components/table.jsx";
 import { useEffect, useState } from "react";
 import { deleteProdutosApi, getProdutosApi } from "../services/api";
@@ -43,9 +43,11 @@ function Initial() {
     console.log("atualizad");
     getProdutos();
   }, [showList]);
-
   return (
     <>
+     <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
       {showList ? (
         <Table produtos={produtos} deleteFn={deleteProdutos} editForm={editForm} />
       ) : (
