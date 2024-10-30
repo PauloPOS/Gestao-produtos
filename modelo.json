@@ -41,6 +41,13 @@
       "categoria": "alimentar",
       "preco": "10",
       "estoque": "30"
+    },
+    {
+      "id": "b1eb",
+      "nome": "novo produto",
+      "categoria": "cabelo",
+      "preco": "30,00",
+      "estoque": "50"
     }
   ]
 }

@@ -3,9 +3,12 @@ import Initial from "./pages/index";
 import Layout from "./components/layout";
 import Detalhes from "./pages/detalhes";
 import Cadastro from "./pages/cadastro";
+import { Provider } from "react-redux";
+import store from "./store";
 
 function Routers() {
   return (
+    <Provider store={store}>
     <BrowserRouter>
       <Layout>
         <Routes>
@@ -16,6 +19,7 @@ function Routers() {
         </Routes>
       </Layout>
     </BrowserRouter>
+    </Provider>
   );
 }
 

@@ -3,7 +3,11 @@ import Table from "../components/table.jsx";
 import { useEffect, useState } from "react";
 import { deleteProdutosApi, getProdutosApi } from "../services/api";
 import Form from "../components/form";
+import { useDispatch } from "react-redux";
+import { getAllProdutos } from "../store/slices/produto/actions.js";
 function Initial() {
+  const dispatch = useDispatch();
+
   const [produtos, setProdutos] = useState([]);
   const [showList, setShowList] = useState(true);
   const [form, setForm] = useState({});
@@ -40,8 +44,7 @@ function Initial() {
 
   //ciclo de vida do componente
   useEffect(() => {
-    console.log("atualizad");
-    getProdutos();
+    dispatch(getAllProdutos());
   }, [showList]);
   return (
     <>
