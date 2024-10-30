@@ -45,9 +45,6 @@ function Initial() {
   }, [showList]);
   return (
     <>
-     <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
       {showList ? (
         <Table produtos={produtos} deleteFn={deleteProdutos} editForm={editForm} />
       ) : (
