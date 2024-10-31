@@ -48,6 +48,13 @@
       "categoria": "cabelo",
       "preco": "30,00",
       "estoque": "50"
+    },
+    {
+      "id": "a8e0",
+      "nome": "PAULO ROBERTO MARCHESIN",
+      "preco": "5000",
+      "categoria": "350",
+      "estoque": "20"
     }
   ]
 }

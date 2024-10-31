@@ -1,14 +1,21 @@
 /* eslint-disable react/prop-types */
 
-function Form({ produto, change, submit }) {
+import { useDispatch, useSelector } from "react-redux";
+import { editForm, saveForm } from "../store/slices/produto/actions";
+import { useNavigate } from "react-router-dom";
 
-  console.log("Produto:", produto);
-  console.log("Change Function:", change);
-  console.log("Submit Function:", submit);
+function Form({ isEdit }) {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const produto = useSelector((state) => state.produto.detalhe);
+
+  const changeField = (field, value) => dispatch(editForm(field, value));
+
+  const submitForm = () => dispatch(saveForm(isEdit)).then(() => navigate("/"));
 
   return (
     <div className="cadastro mt-10">
-      <form>
+      <div>
         <div className="grid gap-6 mb-6 md:grid-cols-2">
           <div>
             <label
@@ -20,8 +27,8 @@ function Form({ produto, change, submit }) {
             <input
               type="text"
               id="nome"
-              onChange={(e) => change("nome", e.target.value)}
-              placeholder="Digite aqui o Nome"
+              onChange={(e) => changeField("nome", e.target.value)}
+              placeholder="Digite aqui o Produto"
               value={produto?.nome || ""}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
               required
@@ -29,16 +36,16 @@ function Form({ produto, change, submit }) {
           </div>
           <div>
             <label
-              htmlFor="idade"
+              htmlFor="categoria"
               className="block mb-2 text-sm font-medium text-gray-900 "
             >
               Categoria
             </label>
             <input
               type="text"
-              id="idade"
-              onChange={(e) => change("categoria", e.target.value)}
-              placeholder="Digite a Categoria"
+              id="categoria"
+              onChange={(e) => changeField("categoria", e.target.value)}
+              placeholder="Digite sua categoria"
               value={produto?.categoria || ""}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
               required
@@ -48,16 +55,16 @@ function Form({ produto, change, submit }) {
         <div className="grid gap-6 mb-6 md:grid-cols-2">
           <div>
             <label
-              htmlFor="email"
+              htmlFor="preco"
               className="block mb-2 text-sm font-medium text-gray-900 "
             >
               Preço
             </label>
             <input
-              type="turma"
-              id="turma"
-              onChange={(e) => change("preco", e.target.value)}
-              placeholder="Digite o Preço"
+              type="preco"
+              id="preco"
+              onChange={(e) => changeField("preco", e.target.value)}
+              placeholder="Digite valor unitário"
               value={produto?.preco || ""}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
               required
@@ -65,16 +72,16 @@ function Form({ produto, change, submit }) {
           </div>
           <div>
             <label
-              htmlFor="email"
+              htmlFor="estoque"
               className="block mb-2 text-sm font-medium text-gray-900 "
             >
               Estoque
             </label>
             <input
-              type="email"
-              id="email"
-              onChange={(e) => change("estoque", e.target.value)}
-              placeholder="Digite a quantidade no Estoque"
+              type="estoque"
+              id="estoque"
+              onChange={(e) => changeField("estoque", e.target.value)}
+              placeholder="Digite a quantidade"
               value={produto?.estoque || ""}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
               required
@@ -84,16 +91,20 @@ function Form({ produto, change, submit }) {
 
         <button
           type="submit"
-          onClick={submit}
+          onClick={submitForm}
           className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Salvar
         </button>
-      </form>
+      </div>
     </div>
   );
 }
 
-
 export default Form;
 
+// <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
+// const handleSubmit = (event) => {
+//   event.preventDefault();
+//   console.log("Nome submetido:", nome);
+// }

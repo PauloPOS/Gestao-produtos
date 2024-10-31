@@ -3,27 +3,24 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
   produtos: [],
   detalhe: [],
+  loading: false,  
 }
 
-export const counterSlice = createSlice({
+const produtoSlice = createSlice({
   name: 'produto',
   initialState,
   reducers: {
-    setProdutos: (state, action) => {
-        state.produtos = action.payload
+    setLoading: (state, action) => {
+      state.loading = action.payload;
+    },
+    setAlunos: (state, action) => {
+      state.alunos = action.payload;
     },
     setDetalhes: (state, action) => {
-        state.detalhe = action.payload
+      state.detalhe = action.payload;
     },
-    
-    
-    //incrementByAmount: (state, action: PayloadAction<number>) => {
-     // state.value += action.payload
-    //},
   },
-})
+});
 
-// Action creators are generated for each case reducer function
-export const { setProdutos, setDetalhes } = counterSlice.actions
-
-export default counterSlice.reducer
+export const { setProdutos, setDetalhes, setLoading } = produtoSlice.actions;
+export default produtoSlice.reducer;
