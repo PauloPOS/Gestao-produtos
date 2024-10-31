@@ -61,14 +61,6 @@ function Header() {
                 Cadastro
               </Link>
             </li>
-            <li>
-              <Link
-                to="/teste"
-                className="block py-2 px-3 md:p-0 text-white rounded hover:bg-blue-700 md:hover:bg-transparent md:hover:text-yellow-300 dark:text-blue-100 dark:hover:text-yellow-400 dark:hover:bg-blue-700"
-              >
-                Teste
-              </Link>
-            </li>
           </ul>
         </div>
       </div>

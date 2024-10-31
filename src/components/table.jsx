@@ -7,7 +7,7 @@ import { deleteProduto } from "../store/slices/produto/actions";
 function Table() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { produtos, loading } = useSelector((state) => state.produto);
+  const { produtos } = useSelector((state) => state.produto);
 
   const removeProduto = (produto) => dispatch(deleteProduto(produto));
 
@@ -26,8 +26,8 @@ function Table() {
           </tr>
         </thead>
         <tbody>
-          {loading && 
-            produtos?.map((item, i) => (
+         
+            {produtos?.map((item, i) => (
               <tr
                 key={i}
                 className="bg-white text-center border-b dark:bg-gray-800 dark:border-gray-700"

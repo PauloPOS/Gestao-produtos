@@ -13,8 +13,8 @@ const produtoSlice = createSlice({
     setLoading: (state, action) => {
       state.loading = action.payload;
     },
-    setAlunos: (state, action) => {
-      state.alunos = action.payload;
+    setProdutos: (state, action) => {
+      state.produtos = action.payload;
     },
     setDetalhes: (state, action) => {
       state.detalhe = action.payload;
