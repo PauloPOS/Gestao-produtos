@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../assets/styleGlobal.css";
+
 
 function ErrorProduto() {
   return (

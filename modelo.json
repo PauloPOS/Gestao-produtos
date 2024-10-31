@@ -1,13 +1,6 @@
 {
   "produtos": [
     {
-      "id": "1",
-      "nome": "Produto A",
-      "categoria": "Eletrônicos",
-      "preco": "500.00",
-      "estoque": 20
-    },
-    {
       "id": "3",
       "nome": "Produto C",
       "categoria": "Vestuário",
@@ -16,8 +9,8 @@
     },
     {
       "id": "4",
-      "nome": "Produto D",
-      "categoria": "Eletrônicos",
+      "nome": "Produto Demais",
+      "categoria": "Eletrônicos do mané",
       "preco": "850.00",
       "estoque": 15
     },
@@ -27,13 +20,6 @@
       "categoria": "Vestuário",
       "preco": "80.00",
       "estoque": 100
-    },
-    {
-      "id": "8",
-      "nome": "Produto H",
-      "categoria": "Automotivo",
-      "preco": "2000.00",
-      "estoque": 5
     },
     {
       "id": "9",
@@ -50,11 +36,18 @@
       "estoque": 8
     },
     {
-      "id": "c3c1",
-      "nome": "Café ",
+      "id": "2ae2",
+      "nome": "Produto  café",
       "categoria": "alimentar",
-      "preco": "14.00",
-      "estoque": "80"
+      "preco": "10",
+      "estoque": "30"
+    },
+    {
+      "id": "b1eb",
+      "nome": "novo produto",
+      "categoria": "cabelo",
+      "preco": "30,00",
+      "estoque": "50"
     }
   ]
 }
